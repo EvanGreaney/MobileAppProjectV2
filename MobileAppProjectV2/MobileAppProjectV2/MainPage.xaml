@@ -4,11 +4,12 @@
              xmlns:local="clr-namespace:MobileAppProjectV2"
              x:Class="MobileAppProjectV2.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+    <StackLayout HorizontalOptions="Center" 
+                 VerticalOptions="Center">
+        <Button x:Name="btnEnter" Text="Enter" 
+                Margin="10, 5, 10, 10"
+                Clicked="btnEnter_Clicked"/>
+
     </StackLayout>
 
 </ContentPage>

@@ -3,20 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace MobileAppProjectV2
 {
-    public partial class MainPage : ContentPage
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class NavPage : TabbedPage
     {
-        public MainPage()
+        public NavPage()
         {
             InitializeComponent();
-        }
-
-        private void btnEnter_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new NavPage());
         }
     }
 }
