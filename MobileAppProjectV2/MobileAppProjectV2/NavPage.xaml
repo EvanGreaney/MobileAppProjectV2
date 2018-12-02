@@ -4,7 +4,7 @@
             xmlns:NavPage="clr-namespace:MobileAppProjectV2"
              x:Class="MobileAppProjectV2.NavPage">
     <!--Pages can be added as references or inline-->
-    <ContentPage Title="CoinPage" />
-    <ContentPage Title="CalcPage" />
-    <ContentPage Title="DicePage" />
+    <NavPage:CoinPage Title="TestPage1Page" />
+    <NavPage:CalcPage Title="TestPage2Page" />
+    <NavPage:DicePage Title="TestPage3Page" />
 </TabbedPage>

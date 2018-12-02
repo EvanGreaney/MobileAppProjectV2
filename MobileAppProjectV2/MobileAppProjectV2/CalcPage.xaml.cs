@@ -16,23 +16,32 @@ namespace MobileAppProjectV2
         {
             InitializeComponent();
         }
-
-
-        private void btnEnter_Clicked(object sender, EventArgs e)
+        private void setUpGrid()
+        {
+            var Grid = new Grid();
+            GridSetUp.ColumnDefinitions = new ColumnDefinitionCollection();
+            // rows
+            GridSetUp.RowDefinitions = new RowDefinitionCollection();
+        }
+        private void OnSelectNumber(object sender, EventArgs e)
         {
 
         }
-        private void btnEnter_Clicked_2(object sender, EventArgs e)
+        public static double Calculate(string mathOperator, double value)
         {
+            double result = 0;
 
-        }
-        private void btnEnter_Clicked_3(object sender, EventArgs e)
-        {
+            switch (mathOperator)
+            {
+                case "+":
+                    result = result + value;
+                    break;
+                case "-":
+                    result = result - value;
+                    break;
+            }
 
-        }
-        private void btnEnter_Clicked_4(object sender, EventArgs e)
-        {
-
+            return result;
         }
 
     }
