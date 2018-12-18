@@ -15,32 +15,31 @@ namespace MobileAppProjectV2
         public CoinPage()
         {
             InitializeComponent();
-            Coinflip();
+            
         }
-        private static int Coinflip()
+
+
+
+        private void CoinFlipper_Clicked(object sender, EventArgs e)
         {
 
-            Random Rand = new Random();
-
-            int heads = 0;
-            int tails = 0;
-            int result = 0;
-            int coinAmount = 3;
-
-            for (int i = 0; i < coinAmount; i++)
+            //array of strings
+            string[] strLabel =
             {
-                result = Rand.Next(0, 2);
-                if (result == 1)
-                {
-                    heads++;
-                }
-                else
-                {
-                    tails++;
-                }
-                
+                "0","1",
+            };
+            //random number generator
+            Random r = new Random();
+            int NumSelect = r.Next(0,2);
+            if (NumSelect == 1)
+            {
+                CoinImage.Source = ImageSource.FromResource("MobileAppProjectV2.Images.coin_tex_head.png");
             }
-            return result;
-        }
+            else
+            {
+                CoinImage.Source = ImageSource.FromResource("MobileAppProjectV2.Images.coin_tex_tail.png");
+            }
+
+        }   
     }
 }
