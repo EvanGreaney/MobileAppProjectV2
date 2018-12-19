@@ -3,10 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MobileAppProjectV2.CoinPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Image x:Name="CoinImage" Source="MobileAppProjectV2.Images.coin_tex_head.png" Aspect="AspectFill" />
+            <Button x:Name="CoinFlipper" Clicked="CoinFlipper_Clicked" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

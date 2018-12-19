@@ -2,9 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MobileAppProjectV2.CalcPage">
-    <ContentPage.Content>
-        <StackLayout >
-            <Grid x:Name="GridSetUp" Padding="5,0" RowSpacing="5" ColumnSpacing="5">
+
+    <StackLayout>
+            <Grid x:Name="GridSetUp" Padding="5,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
@@ -17,51 +17,77 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-            </Grid>
-            <Label x:Name="resultText" FontSize="48" FontAttributes="Bold" BackgroundColor="Red" Text="8000" Grid.Row="0" Grid.Column="0"
-              TextColor="White" HorizontalTextAlignment="End" VerticalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Label x:Name="resultText" FontSize="48" FontAttributes="Bold" BackgroundColor="Blue" Text="8000" Grid.Row="0" Grid.Column="0"
+              TextColor="White"
                 LineBreakMode="NoWrap" Grid.ColumnSpan="2"  />
 
-            <Label x:Name="resultText2" FontSize="48" FontAttributes="Bold" BackgroundColor="Blue" Text="8000" Grid.Row="0" Grid.Column="2"
-              TextColor="White" HorizontalTextAlignment="End" VerticalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"
+            <Label x:Name="resultText2" FontSize="48" FontAttributes="Bold" BackgroundColor="Red" Text="8000" Grid.Row="0" Grid.Column="2"
+              TextColor="White"
                 LineBreakMode="NoWrap" Grid.ColumnSpan="2"  />
-
-            <Button Text="1000"  Margin="10, 5, 10, 10" Grid.Row="1" Grid.Column="0" 
+                
+            <Button Text="+"  Margin="10, 5, 10, 10" Grid.Row="1" Grid.Column="0" 
                BackgroundColor="Blue" TextColor="Black" 
-               FontSize="36" BorderRadius="0" Clicked="OnSelectNumber" />
+               FontSize="36" BorderRadius="0" Clicked="OnSelectOperaterBlue" />
 
-            <Button Text="1000"  Margin="10, 5, 10, 10" Grid.Row="1" Grid.Column="2"
+            <Button Text="+"  Margin="10, 5, 10, 10" Grid.Row="1" Grid.Column="2" 
+               BackgroundColor="Red" TextColor="Black" 
+               FontSize="36" BorderRadius="0" Clicked="OnSelectOperaterRed" />
+
+            <Button Text="-"  Margin="10, 5, 10, 10" Grid.Row="2" Grid.Column="0" 
+               BackgroundColor="Blue" TextColor="Black" 
+               FontSize="36" BorderRadius="0" Clicked="OnSelectOperaterBlue" />
+
+            <Button Text="-"  Margin="10, 5, 10, 10" Grid.Row="2" Grid.Column="2" 
+               BackgroundColor="Red" TextColor="Black" 
+               FontSize="36" BorderRadius="0" Clicked="OnSelectOperaterRed" />
+
+            <Button Text="1000"  Margin="10, 5, 10, 10" Grid.Row="3" Grid.Column="0" 
+               BackgroundColor="Blue" TextColor="Black" 
+               FontSize="36" BorderRadius="0" Clicked="OnSelectNumberBlue" />
+
+            <Button Text="1000"  Margin="10, 5, 10, 10" Grid.Row="3" Grid.Column="2"
                BackgroundColor="Red" TextColor="Black"  
-               FontSize="36" BorderRadius="0" Clicked="OnSelectNumber" />
+               FontSize="36" BorderRadius="0" Clicked="OnSelectNumberRed" />
 
 
-            <Button Text="500"  Margin="10, 5, 10, 10" Grid.Row="2" Grid.Column="0"
+            <Button Text="500"  Margin="10, 5, 10, 10" Grid.Row="4" Grid.Column="0"
                BackgroundColor="Blue" TextColor="Black"
-               FontSize="36" BorderRadius="0" Clicked="OnSelectNumber" />
+               FontSize="36" BorderRadius="0" Clicked="OnSelectNumberBlue" />
 
-            <Button Text="500"  Margin="10, 5, 10, 10" Grid.Row="2" Grid.Column="2"
+            <Button Text="500"  Margin="10, 5, 10, 10" Grid.Row="4" Grid.Column="2"
                BackgroundColor="Red" TextColor="Black"
-               FontSize="36" BorderRadius="0" Clicked="OnSelectNumber" />
+               FontSize="36" BorderRadius="0" Clicked="OnSelectNumberRed" />
 
-            <Button Text="100"  Margin="10, 5, 10, 10" Grid.Row="3" Grid.Column="0"
+            <Button Text="100"  Margin="10, 5, 10, 10" Grid.Row="5" Grid.Column="0"
                BackgroundColor="Blue" TextColor="Black"
-               FontSize="36" BorderRadius="0" Clicked="OnSelectNumber" />
+               FontSize="36" BorderRadius="0" Clicked="OnSelectNumberBlue" />
 
-            <Button Text="100"  Margin="10, 5, 10, 10" Grid.Row="3" Grid.Column="2"
+            <Button Text="100"  Margin="10, 5, 10, 10" Grid.Row="5" Grid.Column="2"
                BackgroundColor="Red" TextColor="Black"
-               FontSize="36" BorderRadius="0" Clicked="OnSelectNumber" />
+               FontSize="36" BorderRadius="0" Clicked="OnSelectNumberRed" />
 
-            <Button Text="50"  Margin="10, 5, 10, 10" Grid.Row="4" Grid.Column="0"
+            <Button Text="50"  Margin="10, 5, 10, 10" Grid.Row="6" Grid.Column="0"
                BackgroundColor="Blue" TextColor="Black"
-                FontSize="36" BorderRadius="0" Clicked="OnSelectNumber" />
+                FontSize="36" BorderRadius="0" Clicked="OnSelectNumberBlue" />
 
-            <Button Text="50"  Margin="10, 5, 10, 10" Grid.Row="4" Grid.Column="2"
+            <Button Text="50"  Margin="10, 5, 10, 10" Grid.Row="6" Grid.Column="2"
                BackgroundColor="Red" TextColor="Black"
-                FontSize="36" BorderRadius="0" Clicked="OnSelectNumber" />
+                FontSize="36" BorderRadius="0" Clicked="OnSelectNumberRed" />
+
+            <Button Text="="  Margin="10, 5, 10, 10" Grid.Row="7" Grid.Column="0"
+               BackgroundColor="Blue" TextColor="Black"
+                FontSize="36" BorderRadius="0" Clicked="OnCalculateBlue" />
+
+            <Button Text="="  Margin="10, 5, 10, 10" Grid.Row="7" Grid.Column="2"
+               BackgroundColor="Red" TextColor="Black"
+                FontSize="36" BorderRadius="0" Clicked="OnCalculateRed" />
+
+        </Grid>
+    </StackLayout>
 
 
-
-        </StackLayout>
-    </ContentPage.Content>
 </ContentPage>
