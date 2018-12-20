@@ -12,11 +12,27 @@
   <ItemGroup>
     <None Remove="Images\coin_tex_head.png" />
     <None Remove="Images\coin_tex_tail.png" />
+    <None Remove="Images\inverted_dice_1.png" />
+    <None Remove="Images\inverted_dice_2.png" />
+    <None Remove="Images\inverted_dice_3.png" />
+    <None Remove="Images\inverted_dice_4.png" />
+    <None Remove="Images\inverted_dice_5.png" />
+    <None Remove="Images\inverted_dice_6.png" />
+    <None Remove="Images\MilleniumPuzzle.jpg" />
+    <None Remove="QuantumCube.png" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Images\coin_tex_tail.png" />
     <EmbeddedResource Include="Images\coin_tex_head.png" />
+    <EmbeddedResource Include="Images\inverted_dice_1.png" />
+    <EmbeddedResource Include="Images\inverted_dice_2.png" />
+    <EmbeddedResource Include="Images\inverted_dice_3.png" />
+    <EmbeddedResource Include="Images\inverted_dice_4.png" />
+    <EmbeddedResource Include="Images\inverted_dice_5.png" />
+    <EmbeddedResource Include="Images\inverted_dice_6.png" />
+    <EmbeddedResource Include="MilleniumPuzzle.jpg" />
+    <EmbeddedResource Include="QuantumCube.png" />
   </ItemGroup>
 
   <ItemGroup>
