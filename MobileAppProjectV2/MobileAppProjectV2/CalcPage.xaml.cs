@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,19 +13,26 @@ namespace MobileAppProjectV2
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CalcPage : ContentPage
     {
-        int currentState = 1;
-        string myoperator;
-        int mainNumber1, mainNumber2;
-        int resultNumber1, resultNumber2;
+        //variables
+        
+        string myoperator = " ";
+        int mainNumber1 = 0, mainNumber2 = 0;
+        int resultNumber1 = 0, resultNumber2 = 0;
 
         public CalcPage()
         {
            
             InitializeComponent();
+            //setting the values to 8000 at the beginning of each new game
+            resultText.Text = "8000";
+            resultText2.Text = "8000";
+
+            //converting the .text values of resultText to ints
             resultNumber1 = Convert.ToInt32(resultText.Text);
             resultNumber2 = Convert.ToInt32(resultText2.Text);
             
         }
+        //method that sets up the grid
         private void setUpGrid()
         {
             var Grid = new Grid();
@@ -33,6 +41,7 @@ namespace MobileAppProjectV2
             GridSetUp.RowDefinitions = new RowDefinitionCollection();
         }
        
+        //method that when called sets the number for the red side based on the text value of the button pressed
         void OnSelectNumberRed(object sender, EventArgs e)
         {
             Button button = (Button)sender;
@@ -40,7 +49,7 @@ namespace MobileAppProjectV2
             numberPressed = Convert.ToInt32(button.Text);
             mainNumber1 = numberPressed;
         }
-
+        //method that when called sets the number for the blue side based on the text value of the button pressed
         void OnSelectNumberBlue(object sender, EventArgs e)
         {
             Button button = (Button)sender;
@@ -48,39 +57,50 @@ namespace MobileAppProjectV2
             numberPressed = Convert.ToInt32(button.Text);
             mainNumber2 = numberPressed;
         }
-        void OnSelectOperaterRed(object sender, EventArgs e)//event is called when the select operator is called 
+        //method that when called sets the operator for the red side based on the text value of the button pressed
+        void OnSelectOperaterRed(object sender, EventArgs e)
         {
             
             Button button = (Button)sender;
             string pressed = button.Text;
             myoperator = pressed;
         }
-
-        void OnSelectOperaterBlue(object sender, EventArgs e)//event is called when the select operator is called 
+        //method that when called sets the number for the blue side based on the text value of the button pressed
+        void OnSelectOperaterBlue(object sender, EventArgs e) 
         {
 
             Button button = (Button)sender;
             string pressed = button.Text;
             myoperator = pressed;
         }
-
-
-        void OnCalculateBlue(object sender, EventArgs e) //This method is called when we have both first number and second number and we are going to evaluate those number
+        //method that when called sets the result numbers for both sides when the new game button is pressed
+        private void OnSelectNewGame(object sender, EventArgs e)
+        {
+            resultText.Text = "8000";
+            resultText2.Text = "8000";
+            resultNumber1 = 8000;
+            resultNumber2 = 8000;
+        }
+        //method that calculates the result currently to the blue side
+        void OnCalculateBlue(object sender, EventArgs e)
         {
             var result = 0;
-            result = 0;
+           
                  result = OperatorHelper.Calculate(mainNumber2, resultNumber2, myoperator);
                 String stringresult = Convert.ToString(result);
+            resultNumber2 = Convert.ToInt32(stringresult);
                 resultText.Text = stringresult;
             
+            
         }
-
-        void OnCalculateRed(object sender, EventArgs e) //This method is called when we have both first number and second number and we are going to evaluate those number
+        //method that calculates the result currently to the blue side
+        void OnCalculateRed(object sender, EventArgs e) 
         {
             var result = 0;
-            result = 0;  
-                 result = OperatorHelper.Calculate(mainNumber1, resultNumber1, myoperator);
+            
+            result = OperatorHelper.Calculate(mainNumber1, resultNumber1, myoperator);
                 String stringresult = Convert.ToString(result);
+                resultNumber1 = Convert.ToInt32(stringresult);
                 resultText2.Text = stringresult;
                 
                 

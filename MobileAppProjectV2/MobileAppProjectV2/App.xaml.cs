@@ -10,7 +10,7 @@ namespace MobileAppProjectV2
         public App()
         {
             InitializeComponent();
-
+            //MainPage changed to a navigation page to help the navigation page
             MainPage = new NavigationPage(new MainPage());
         }
 

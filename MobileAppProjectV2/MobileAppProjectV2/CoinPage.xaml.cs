@@ -19,25 +19,24 @@ namespace MobileAppProjectV2
         }
 
 
-
+        //coin Flip method that when called generates a random number
+        //and depending on the number displays a certain image of a coin
         private void CoinFlipper_Clicked(object sender, EventArgs e)
         {
 
-            //array of strings
-            string[] strLabel =
-            {
-                "0","1",
-            };
+      
             //random number generator
             Random r = new Random();
             int NumSelect = r.Next(0,2);
             if (NumSelect == 1)
             {
                 CoinImage.Source = ImageSource.FromResource("MobileAppProjectV2.Images.coin_tex_head.png");
+                Result.Text = "Heads";
             }
             else
             {
                 CoinImage.Source = ImageSource.FromResource("MobileAppProjectV2.Images.coin_tex_tail.png");
+                Result.Text = "Tails";
             }
 
         }   

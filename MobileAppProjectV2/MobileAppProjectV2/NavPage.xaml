@@ -3,8 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             xmlns:NavPage="clr-namespace:MobileAppProjectV2"
              x:Class="MobileAppProjectV2.NavPage">
-    <!--Pages can be added as references or inline-->
-    <NavPage:CoinPage Title="TestPage1Page" />
-    <NavPage:CalcPage Title="TestPage2Page" />
-    <NavPage:DicePage Title="TestPage3Page" />
+    <!--NavPage setup for my three pages-->
+    <NavPage:CoinPage Title="Coin Flipper" />
+    <NavPage:CalcPage Title="LP Calculator" />
+    <NavPage:DicePage Title="Dice Roller" />
 </TabbedPage>

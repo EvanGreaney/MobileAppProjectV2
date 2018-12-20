@@ -3,10 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MobileAppProjectV2.DicePage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+       
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" >
+            <!--Image tag that when the button is pressed, depending on the result will display the corresponding image-->
+            <Image x:Name="DiceImage" Source="MobileAppProjectV2.Images.inverted_dice_1.png" Aspect="AspectFill" />
+            <!--Button that when pressed calls the DiceRoller_Clicked method to display an Image-->
+            <Button x:Name="DiceRoller" Text="Roll Dice" Clicked="DiceRoller_Clicked"  BackgroundColor="Silver"/>
+            <!--Label that when the button is pressed displays the result of the coin flip-->
+            <Label x:Name="Result" Text=" " HorizontalTextAlignment="Center" BackgroundColor="Silver"/>
         </StackLayout>
+       
     </ContentPage.Content>
 </ContentPage>
